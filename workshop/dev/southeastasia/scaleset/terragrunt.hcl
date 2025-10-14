@@ -33,7 +33,7 @@ inputs = {
   sku = "Standard_B4ms" # 4cpu 16GiB memory $0.1660/hr
   #sku = "Standard_B8ms" # 8cpu 32GiB memory $0.3330/hr
   instances = 0
-  #instances = 60
+  #instances = 61
 
   network = dependency.virtual_network.outputs.resource.name
   subnet  = "Workshop"
