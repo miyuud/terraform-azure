@@ -17,7 +17,7 @@ remote_state {
 
 # inputs to manage foundation module
 inputs = {
-  subscription_id = "${get_env("SUBSCRIPTION_ID")}"
+  provider_subscription_id = "${get_env("SUBSCRIPTION_ID")}"
 }
 
 terraform {
@@ -34,9 +34,13 @@ generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite"
   contents  = <<EOF
+variable "provider_subscription_id" {
+  type = string
+}
+
 provider "azurerm" {
   features {}
-  subscription_id = var.subscription_id
+  subscription_id = var.provider_subscription_id
 }
 EOF
 }
