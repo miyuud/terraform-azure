@@ -30,7 +30,8 @@ runcmd:
   # docker images
   - docker pull quay.io/jupyter/base-notebook:python-3.12.10
   - docker pull qdrant/qdrant:v1.14.0
-  - docker pull ngrok/ngrok:3.22.1-alpine-e0691d2
+  - docker pull quay.io/jhooooo999/ngrok:3.30.0-alpine-8b7ac94
+  - docker pull ngrok/ngrok:3.30.0-alpine-8b7ac94 # backup
   # workshop setup
   - git clone https://github.com/chechiachang/rag-workshop.git /home/workshop/rag-workshop
   - chown -R workshop:workshop /home/workshop/rag-workshop
