@@ -20,6 +20,34 @@ inputs = {
   sku_name = "S0"
 
   cognitive_deployments = {
+    "gpt-5" = {
+      name = "gpt-5"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5"
+        version = "2025-08-07"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 500
+        #capacity = 1000
+      }
+      rai_policy_name = local.rai_policy_name
+    },
+    "gpt-5-mini" = {
+      name = "gpt-5-mini"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5-mini"
+        version = "2025-08-07"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 500
+        #capacity = 1000
+      }
+      rai_policy_name = local.rai_policy_name
+    },
     "o4-mini" = {
       name = "o4-mini"
       model = {
