@@ -59,6 +59,19 @@ inputs = {
       }
       rai_policy_name = local.rai_policy_name
     },
+    "gpt-5.1-codex-mini" = {
+      name = "gpt-5.1-codex-mini"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5.1-codex-mini"
+        version = "2025-08-07"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 400
+      }
+      rai_policy_name = local.rai_policy_name
+    },
     "gpt-5.3-codex" = {
       name = "gpt-5.3-codex"
       model = {
@@ -112,4 +125,3 @@ inputs = {
 
   enable_telemetry = false
 }
-
