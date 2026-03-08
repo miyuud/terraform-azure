@@ -64,7 +64,7 @@ inputs = {
       model = {
         format  = "OpenAI"
         name    = "gpt-5.1-codex-mini"
-        version = "2025-08-07"
+        version = "2025-11-13"
       }
       scale = {
         type     = "GlobalStandard"
