@@ -20,62 +20,62 @@ inputs = {
   sku_name = "S0"
 
   cognitive_deployments = {
-    "gpt-5" = {
-      name = "gpt-5"
-      model = {
-        format  = "OpenAI"
-        name    = "gpt-5"
-        version = "2025-08-07"
-      }
-      scale = {
-        type     = "GlobalStandard"
-        capacity = 500
-        #capacity = 1000
-      }
-      rai_policy_name = local.rai_policy_name
-    },
-    "gpt-5-mini" = {
-      name = "gpt-5-mini"
-      model = {
-        format  = "OpenAI"
-        name    = "gpt-5-mini"
-        version = "2025-08-07"
-      }
-      scale = {
-        type     = "GlobalStandard"
-        capacity = 500
-        #capacity = 1000
-      }
-      rai_policy_name = local.rai_policy_name
-    },
-    "o4-mini" = {
-      name = "o4-mini"
-      model = {
-        format  = "OpenAI"
-        name    = "o4-mini"
-        version = "2025-04-16"
-      }
-      scale = {
-        type     = "GlobalStandard"
-        capacity = 500
-        #capacity = 1000
-      }
-      rai_policy_name = local.rai_policy_name
-    },
-    "o3-mini" = {
-      name = "o3-mini"
-      model = {
-        format  = "OpenAI"
-        name    = "o3-mini"
-        version = "2025-01-31"
-      }
-      scale = {
-        type     = "GlobalStandard"
-        capacity = 500
-        #capacity = 5000
-      }
-      rai_policy_name = local.rai_policy_name
-    },
+    #"gpt-5" = {
+    #  name = "gpt-5"
+    #  model = {
+    #    format  = "OpenAI"
+    #    name    = "gpt-5"
+    #    version = "2025-08-07"
+    #  }
+    #  scale = {
+    #    type     = "GlobalStandard"
+    #    capacity = 500
+    #    #capacity = 1000
+    #  }
+    #  rai_policy_name = local.rai_policy_name
+    #},
+    #"gpt-5-mini" = {
+    #  name = "gpt-5-mini"
+    #  model = {
+    #    format  = "OpenAI"
+    #    name    = "gpt-5-mini"
+    #    version = "2025-08-07"
+    #  }
+    #  scale = {
+    #    type     = "GlobalStandard"
+    #    capacity = 500
+    #    #capacity = 1000
+    #  }
+    #  rai_policy_name = local.rai_policy_name
+    #},
+    #"o4-mini" = {
+    #  name = "o4-mini"
+    #  model = {
+    #    format  = "OpenAI"
+    #    name    = "o4-mini"
+    #    version = "2025-04-16"
+    #  }
+    #  scale = {
+    #    type     = "GlobalStandard"
+    #    capacity = 500
+    #    #capacity = 1000
+    #  }
+    #  rai_policy_name = local.rai_policy_name
+    #},
+    #"o3-mini" = {
+    #  name = "o3-mini"
+    #  model = {
+    #    format  = "OpenAI"
+    #    name    = "o3-mini"
+    #    version = "2025-01-31"
+    #  }
+    #  scale = {
+    #    type     = "GlobalStandard"
+    #    capacity = 500
+    #    #capacity = 5000
+    #  }
+    #  rai_policy_name = local.rai_policy_name
+    #},
     "gpt-41" = {
       name = "gpt-4.1"
       model = {
@@ -146,33 +146,33 @@ inputs = {
       }
       rai_policy_name = local.rai_policy_name
     },
-    "text-embedding-3-small" = {
-      name = "text-embedding-3-small"
-      model = {
-        format  = "OpenAI"
-        name    = "text-embedding-3-small"
-        version = "1"
-      }
-      scale = {
-        type     = "Standard"
-        capacity = 340
-      }
-      rai_policy_name = local.rai_policy_name
-    },
-    "text-embedding-ada-002" = {
-      name = "text-embedding-ada-002"
-      model = {
-        format  = "OpenAI"
-        name    = "text-embedding-ada-002"
-        version = "2"
-      }
-      scale = {
-        type     = "GlobalStandard"
-        capacity = 500
-        #capacity = 1000
-      }
-      rai_policy_name = local.rai_policy_name
-    }
+    #"text-embedding-3-small" = {
+    #  name = "text-embedding-3-small"
+    #  model = {
+    #    format  = "OpenAI"
+    #    name    = "text-embedding-3-small"
+    #    version = "1"
+    #  }
+    #  scale = {
+    #    type     = "Standard"
+    #    capacity = 340
+    #  }
+    #  rai_policy_name = local.rai_policy_name
+    #},
+    #"text-embedding-ada-002" = {
+    #  name = "text-embedding-ada-002"
+    #  model = {
+    #    format  = "OpenAI"
+    #    name    = "text-embedding-ada-002"
+    #    version = "2"
+    #  }
+    #  scale = {
+    #    type     = "GlobalStandard"
+    #    capacity = 500
+    #    #capacity = 1000
+    #  }
+    #  rai_policy_name = local.rai_policy_name
+    #}
   }
 
   custom_subdomain_name = "chechia-workshop"

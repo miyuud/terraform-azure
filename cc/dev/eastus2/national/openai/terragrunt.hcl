@@ -58,6 +58,32 @@ inputs = {
         capacity = 400
       }
       rai_policy_name = local.rai_policy_name
+    },
+    "gpt-5.3-codex" = {
+      name = "gpt-5.3-codex"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5.3-codex"
+        version = "2026-02-24"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 400
+      }
+      rai_policy_name = local.rai_policy_name
+    },
+    "gpt-5.4" = {
+      name = "gpt-5.4"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5.4"
+        version = "2026-03-05"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 400
+      }
+      rai_policy_name = local.rai_policy_name
     }
   }
 
