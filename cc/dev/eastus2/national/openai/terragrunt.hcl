@@ -97,6 +97,32 @@ inputs = {
         capacity = 400
       }
       rai_policy_name = local.rai_policy_name
+    },
+    "gpt-5.4-nano" = {
+      name = "gpt-5.4-nano"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5.4-nano"
+        version = "2026-03-17"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 400
+      }
+      rai_policy_name = local.rai_policy_name
+    },
+    "gpt-5.4-mini" = {
+      name = "gpt-5.4-mini"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5.4-mini"
+        version = "2026-03-17"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 400
+      }
+      rai_policy_name = local.rai_policy_name
     }
   }
 
