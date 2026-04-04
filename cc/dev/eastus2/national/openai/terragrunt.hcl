@@ -20,6 +20,20 @@ inputs = {
   sku_name = "S0"
 
   cognitive_deployments = {
+    "text-embedding-3-small" = {
+      name = "text-embedding-3-small"
+      model = {
+        format  = "OpenAI"
+        name    = "text-embedding-3-small"
+        version = "1"
+      }
+      scale = {
+        type     = "Standard"
+        capacity = 350
+        #capacity = 1000
+      }
+      rai_policy_name = local.rai_policy_name
+    },
     "gpt-41" = {
       name = "gpt-4.1"
       model = {
