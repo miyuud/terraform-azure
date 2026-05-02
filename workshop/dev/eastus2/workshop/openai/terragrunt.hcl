@@ -20,19 +20,6 @@ inputs = {
   sku_name = "S0"
 
   cognitive_deployments = {
-    "gpt-55" = {
-      name = "gpt-5.5"
-      model = {
-        format  = "OpenAI"
-        name    = "gpt-5.5"
-        version = "2026-04-24"
-      }
-      scale = {
-        type     = "GlobalStandard"
-        capacity = 500
-      }
-      rai_policy_name = local.rai_policy_name
-    },
     #"gpt-5" = {
     #  name = "gpt-5"
     #  model = {
