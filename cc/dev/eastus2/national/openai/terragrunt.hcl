@@ -1,4 +1,9 @@
 terraform {
+  before_hook "deprecated_stack_guard" {
+    commands = ["init", "plan", "apply", "destroy"]
+    execute  = ["bash", "-lc", "echo 'Deprecated stack: use ../ai-foundry instead.' >&2; exit 1"]
+  }
+
   # https://github.com/Azure/terraform-azurerm-avm-res-cognitiveservices-account/pull/99
   #source = "git::https://github.com/Azure/terraform-azurerm-avm-res-cognitiveservices-account.git//?ref=v0.6.0"
   source = "git::https://github.com/asttle-sigtech/terraform-azurerm-avm-res-cognitiveservices-account.git//?ref=patch-1"
