@@ -1,15 +1,15 @@
-Configure Vault
-===
+# vault_config (Legacy)
 
-# Dependency
+Deprecated legacy stack under `chechia/base/*`.
+Keep existing stack, but prefer new layered paths for new work.
 
+## Dependencies
 - vault-infra
 - kubernetes cluster
-  - kubeconfig file
+- kubeconfig file
 
-# Usage
-
-```
+## Usage
+```bash
 terragrunt init
 terragrunt plan
 terragrunt apply

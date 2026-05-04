@@ -1,26 +1,18 @@
-Foundation: base of terraform
-===
+# foundation
 
-Content in foundation are essential to initializa terraform. These resources are manually provisioned and then imported to terraform for management.
+Base Terraform backend resources.
 
-WARNING: Misconfiguration in foundation could cause terraform total failure.
-
-contents:
+## Scope
 - resource group
 - storage account
+- storage container
 
-# Initialization
+## Notes
+These resources are usually created manually first, then imported.
+Misconfiguration here can break Terraform state operations.
 
-- Manually create resources on azure
-  - resource group
-  - storage account
-  - storage container
-- Import resources
-- Manage resources with terraform
-
-# Import
-
-```
+## Import Example
+```bash
 az group list
 
 SUBSCRIPTION_ID=

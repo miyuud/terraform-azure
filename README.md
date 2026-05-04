@@ -1,75 +1,69 @@
 Terraform for Azure Cloud
 ===
 
-This repository manage my azure resources with terraform and terragrunt. For user not using terragrunt, check our [archived version terraform-azure](archived/azure/README.md)
+Terraform + Terragrunt stacks for Azure resources.
 
-# Client Version
+# Stack Layout
 
-terraform
-  0.13.5
-terragrunt
-  0.26.0
+Current stack path format:
+`<resource-group>/<env>/<region>/<optional project>/<resource>`
+
+Examples:
+- `cc/dev/eastus2/national/ai-foundry`
+- `cc/g/tenant/login_users`
+- `cc/g/tenant/verified_domains`
+
+Envs:
+- `g` (global)
+- `dev`
+
+Regions:
+- `tenant`
+- `eastus2`
+- others as needed
+
+Legacy layout:
+- `chechia/<resource-group>` is legacy without clear layering.
+- Mark as deprecated in new changes, but do not remove existing stacks.
 
 # Usage
 
+Choose a stack path:
+```bash
+cd cc/dev/eastus2/national/ai-foundry
+# or
+cd cc/g/tenant/login_users
+# or
+cd cc/g/tenant/verified_domains
 ```
-NEW_PROJECT_NAME=my-awesome-azure
 
-cp -r chechia ${NEW_PROJECT_NAME}
-# cd to base/dev/staging/prod environment
-cd ${NEW_PROJECT_NAME}/base/foundation
-```
-
-Edit environments
-- resource group name
-- storage account name
-- storage container name
-```
-vim env.tfvars
-
+Set required environment variables:
+```bash
 az login
-az account list
-
 az account set --subscription="SUBSCRIPTION_ID"
 export SUBSCRIPTION_ID="SUBSCRIPTION_ID"
-
-terragrunt init && terragrunt plan
 ```
 
----
-
-# First time? Let's Get-Started!
-
-### Install tools
-
-- Azure-cli [Azure doc: Install azure-cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?WT.mc_id=AZ-MVP-5003985)
-- Terraform [Azure doc: configure terraform using azure cloud shell](https://docs.microsoft.com/en-us/azure/developer/terraform/get-started-cloud-shell?WT.mc_id=AZ-MVP-5003985)
-- Terragrunt [Github: terragrunt](https://github.com/gruntwork-io/terragrunt)
-
-### config Azure cli
-
-[Azure doc: get started with azure cli](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?WT.mc_id=AZ-MVP-5003985)
-
-This project use credential from azure-cli.
-```
-az login
+Run Terragrunt:
+```bash
+terragrunt init
+terragrunt plan
+terragrunt apply
 ```
 
-### Create resource group, storage account, and storage blob container
+# First-time Backend Setup
 
-[Azure doc: create storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?WT.mc_id=AZ-MVP-5003985&tabs=azure-cli#create-a-storage-account-1)
+Create Terraform backend resources manually, then use Terragrunt.
 
-[Azure doc: Configure storage account](https://docs.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage?WT.mc_id=AZ-MVP-5003985#configure-storage-account)
-
-```
+```bash
 RESOURCE_GROUP_NAME=base
 LOCATION=southeastasia
+STORAGE_ACCOUNT_NAME=""
+CONTAINER_NAME=base
 
 az group create \
   --name ${RESOURCE_GROUP_NAME} \
   --location ${LOCATION}
-
-STORAGE_ACCOUNT_NAME=""
 
 az storage account create \
   --name ${STORAGE_ACCOUNT_NAME} \
@@ -78,10 +72,8 @@ az storage account create \
   --sku Standard_LRS \
   --kind StorageV2
 
-CONTAINER_NAME=base
-
 az storage container create \
-    --account-name ${STORAGE_ACCOUNT_NAME} \
-    --name ${CONTAINER_NAME} \
-    --auth-mode login
+  --account-name ${STORAGE_ACCOUNT_NAME} \
+  --name ${CONTAINER_NAME} \
+  --auth-mode login
 ```
