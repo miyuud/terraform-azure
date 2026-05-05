@@ -14,14 +14,14 @@ inputs = {
   role_assignment_scope = local.tenant_role_scope
 
   console_login_users = {
-    #chechia = {
-    #  user_principal_name  = "chechia@chechia.net"
-    #  invite_external_user = true
-    #  role_definition_name = "Reader"
-    #}
+    chechia = {
+      user_principal_name  = "chechiachang999@gmail.com"
+      invite_external_user = true
+      role_definition_name = "Reader"
+    }
     johnlin = {
       user_principal_name  = "linton.tw@gmail.com"
-      invite_external_user = true # gmail.com is not a verified tenant domain, so this will be invited as guest.
+      invite_external_user = true
       role_definition_name = "Reader"
     }
   }
