@@ -47,7 +47,8 @@ inputs = {
       }
       scale = {
         type     = "Standard"
-        capacity = 200
+        capacity = 350
+        #capacity = 1000
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -60,7 +61,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -73,7 +74,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -86,7 +87,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -99,7 +100,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -112,7 +113,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -125,7 +126,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -138,7 +139,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -151,7 +152,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       rai_policy_name = local.rai_policy_name
     }

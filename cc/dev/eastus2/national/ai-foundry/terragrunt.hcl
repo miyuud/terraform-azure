@@ -52,7 +52,7 @@ inputs = {
       }
       sku = {
         name     = "Standard"
-        capacity = 200
+        capacity = 350
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -66,7 +66,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -80,7 +80,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -94,7 +94,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -108,7 +108,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -122,7 +122,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 1005
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -136,7 +136,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 804
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -150,7 +150,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -164,7 +164,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 200
+        capacity = 400
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
