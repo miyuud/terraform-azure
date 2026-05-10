@@ -25,6 +25,19 @@ inputs = {
   sku_name = "S0"
 
   cognitive_deployments = {
+    "gpt-5.5" = {
+      name = "gpt-5.5"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5.5"
+        version = "2026-04-24"
+      }
+      scale = {
+        type     = "GlobalStandard"
+        capacity = 200
+      }
+      rai_policy_name = local.rai_policy_name
+    },
     "text-embedding-3-small" = {
       name = "text-embedding-3-small"
       model = {
@@ -34,8 +47,7 @@ inputs = {
       }
       scale = {
         type     = "Standard"
-        capacity = 350
-        #capacity = 1000
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -48,7 +60,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -61,7 +73,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -74,7 +86,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -87,7 +99,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -100,7 +112,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -113,7 +125,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -126,7 +138,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     },
@@ -139,7 +151,7 @@ inputs = {
       }
       scale = {
         type     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       rai_policy_name = local.rai_policy_name
     }

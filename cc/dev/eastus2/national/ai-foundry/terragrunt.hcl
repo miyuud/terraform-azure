@@ -29,6 +29,20 @@ inputs = {
   projects                   = {}
 
   cognitive_deployments = {
+    "gpt-5.5" = {
+      name = "gpt-5.5"
+      model = {
+        format  = "OpenAI"
+        name    = "gpt-5.5"
+        version = "2026-04-24"
+      }
+      sku = {
+        name     = "GlobalStandard"
+        capacity = 200
+      }
+      dynamic_throttling_enabled = false
+      rai_policy_name            = local.rai_policy_name
+    }
     "text-embedding-3-small" = {
       name = "text-embedding-3-small"
       model = {
@@ -38,7 +52,7 @@ inputs = {
       }
       sku = {
         name     = "Standard"
-        capacity = 350
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -52,7 +66,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -66,7 +80,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -80,7 +94,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -94,7 +108,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -108,7 +122,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 1005
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -122,7 +136,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 804
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -136,7 +150,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
@@ -150,7 +164,7 @@ inputs = {
       }
       sku = {
         name     = "GlobalStandard"
-        capacity = 400
+        capacity = 200
       }
       dynamic_throttling_enabled = false
       rai_policy_name            = local.rai_policy_name
